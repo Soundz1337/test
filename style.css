@@ -1,0 +1,147 @@
+:root {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    
+    color: white;
+}
+
+
+
+body {
+    margin: 64px 0 64px 0;
+    margin-bottom: 64px;
+    background-color: #191C1D;
+
+
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    gap: 32px;
+
+    margin: auto;
+}
+
+.anime-card{
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+
+    width: 224px;
+}
+
+
+.anime-card-cover{
+
+    aspect-ratio: 3 / 5;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+
+    background: black;
+
+    transition: 0.35s;
+}
+
+.anime-card-cover span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+
+    background-position: 50%;
+    background-size: cover;
+
+    transition: 0.3s;
+
+}
+
+
+.anime-card-cover:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.25);
+}
+
+.anime-card-cover:hover span{
+    filter: blur(16px) opacity(.5);
+}
+
+
+.anime-card-hover-data{
+    z-index: 2;
+    opacity: 0;
+    box-sizing: border-box;
+    padding: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+
+    gap: 8px;
+
+
+    transition: 0.35s;
+}
+
+.anime-card-hover-data-title{
+    font: var(--title-medium);
+}
+
+.anime-card-hover-data-episodes{
+    font: var(--body-small);
+    font-weight: 500;
+}
+
+.anime-card-hover-data-description{
+    font: var(--body-small);
+    color: #ffffff;
+}
+
+.anime-card-hover-data-button{
+    font:var(--label-large);
+    align-self: center;
+    margin-top: auto;
+    padding: 12px 24px;
+    border-radius: 100px;
+    background-color: #A8C7FF;
+    color: #002F65;
+
+    cursor: pointer;
+}
+
+
+.anime-card-cover:hover .anime-card-hover-data{
+    opacity: 1;
+}
+
+
+.anime-card-title{
+    font: var(--title-medium);
+
+    overflow-wrap: normal;
+    padding-top: 8px;
+    cursor: pointer;
+
+    color: #E1E3E4;
+
+    transition: 0.5s;
+}
+
+.anime-card-title:hover{
+    color: #A8C7FF;
+}
